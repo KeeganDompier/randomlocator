@@ -1,0 +1,35 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="oEfbL!Q0Kaqlj+4A|V%t">Player</variable><variable type="KIND_SpriteKind" id="fCDu1gWmV3UxPfwRWbF!">Projectile</variable><variable type="KIND_SpriteKind" id="IjG[IcQ[fu{}!eYx%xi#">Food</variable><variable type="KIND_SpriteKind" id="2}VrgrWVI6#]w)8uF]5%">Enemy</variable><variable id="_K6goa7=,wpExVD9-GT3">randomSprite</variable><variable id="1fE5Ch1L|0!Fe3pR;SV3">Rock</variable><variable id="32i-!J+,R-v;TuNn#n)y">mySprite</variable><variable id="!c!gh./!sKuG3OK|UcFb">otherSprite</variable></variables><block type="pxt-on-start" x="0" y="0"><statement name="HANDLER"><block type="variables_set"><field name="VAR" id="_K6goa7=,wpExVD9-GT3">randomSprite</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . e e e e e e . . . . . 
+. . . . e e e e e e e e . . . . 
+. . e e e e e e e e e e e e . . 
+. . . 3 3 3 3 3 3 3 3 3 3 . . . 
+. . 3 3 3 3 3 3 3 3 3 3 3 3 . . 
+. 3 3 3 3 2 3 3 3 3 2 3 3 3 3 . 
+. 3 3 3 3 3 3 3 3 3 3 3 3 3 3 . 
+. 3 3 3 3 3 3 2 2 3 3 3 3 3 3 . 
+. 3 3 3 2 3 3 3 3 3 3 2 3 3 3 . 
+. . 3 3 3 2 2 2 2 2 2 3 3 3 . . 
+. . . 3 3 3 3 3 3 3 3 3 3 . . . 
+. . . . 3 3 3 3 3 3 3 3 . . . . 
+. . . . . 3 . . . . 3 . . . . . 
+. . . . . 3 . . . . 3 . . . . . 
+. . . . . 3 . . . . 3 . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="spritesetpos"><value name="sprite"><block type="variables_get"><field name="VAR" id="_K6goa7=,wpExVD9-GT3">randomSprite</field></block></value><value name="x"><shadow type="positionPicker"><field name="index">80</field></shadow></value><value name="y"><shadow type="positionPicker"><field name="index">60</field></shadow></value><next><block type="variables_set"><field name="VAR" id="1fE5Ch1L|0!Fe3pR;SV3">Rock</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . e e e e e e e . . . . . 
+. . . e f f f f f f f e . . . . 
+. . e f f f f f f f f f e . . . 
+. . e f f f f f f f f f e . . . 
+. . e f f e f f f e f f e . . . 
+. . e f f f f f f f f f e . . . 
+. . e f f f f f f f f f e . . . 
+. . e f f e e e e e f f e . . . 
+. . e f f f f f f f f f e . . . 
+. . . e f f f f f f f e . . . . 
+. . . . e e e e e e e . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="gameSplash"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="title"><shadow type="text"><field name="TEXT">This is my rocky game</field></shadow></value><next><block type="spritesetpos"><value name="sprite"><block type="variables_get"><field name="VAR" id="1fE5Ch1L|0!Fe3pR;SV3">Rock</field></block></value><value name="x"><shadow type="positionPicker"><field name="index">0</field></shadow></value><value name="y"><shadow type="positionPicker"><field name="index">0</field></shadow></value></block></next></block></next></block></next></block></next></block></statement></block><block type="forever" x="620" y="140"><statement name="HANDLER"><block type="controls_if"><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="spriteoverlapswith"><value name="sprite"><block type="variables_get"><field name="VAR" id="_K6goa7=,wpExVD9-GT3">randomSprite</field></block></value><value name="other"><block type="variables_get"><field name="VAR" id="1fE5Ch1L|0!Fe3pR;SV3">Rock</field></block></value></block></value><statement name="DO0"><block type="gameOver"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="1" _input_init="true"></mutation><field name="effect">effects.confetti</field><value name="win"><shadow type="toggleWinLose"><field name="win">false</field></shadow></value></block></statement></block></statement></block><block type="keyonevent" x="60" y="460"><field name="button">controller.anyButton</field><field name="event">ControllerButtonEvent.Pressed</field><statement name="HANDLER"><block type="spritesetpos"><value name="sprite"><block type="variables_get"><field name="VAR" id="1fE5Ch1L|0!Fe3pR;SV3">Rock</field></block></value><value name="x"><shadow type="positionPicker"><field name="index">0</field></shadow><block type="device_random"><value name="min"><shadow type="math_number"><field name="NUM">0</field></shadow></value><value name="limit"><shadow type="math_number"><field name="NUM">160</field></shadow></value></block></value><value name="y"><shadow type="positionPicker"><field name="index">0</field></shadow><block type="device_random"><value name="min"><shadow type="math_number"><field name="NUM">0</field></shadow></value><value name="limit"><shadow type="math_number"><field name="NUM">120</field></shadow></value></block></value><next><block type="spritesetpos"><value name="sprite"><block type="variables_get"><field name="VAR" id="_K6goa7=,wpExVD9-GT3">randomSprite</field></block></value><value name="x"><shadow type="positionPicker"><field name="index">0</field></shadow><block type="device_random"><value name="min"><shadow type="math_number"><field name="NUM">0</field></shadow></value><value name="limit"><shadow type="math_number"><field name="NUM">160</field></shadow></value></block></value><value name="y"><shadow type="positionPicker"><field name="index">0</field></shadow><block type="device_random"><value name="min"><shadow type="math_number"><field name="NUM">0</field></shadow></value><value name="limit"><shadow type="math_number"><field name="NUM">120</field></shadow></value></block></value></block></next></block></statement></block></xml>
